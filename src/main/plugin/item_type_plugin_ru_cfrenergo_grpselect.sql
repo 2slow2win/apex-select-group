@@ -82,7 +82,7 @@ wwv_flow_api.create_plugin(
 '    -- print select list',
 '    htp.p(''<select id="'' || p_item.name || ''"',
 '      name="'' || apex_plugin.get_input_name_for_item ||',
-'          ''" class="selectlist apex-item-select">'');',
+'          ''" class="selectlist apex-item-select" '' || p_item.element_attributes || ''>'');',
 '  ',
 '    IF (p_item.lov_display_null) THEN',
 '      apex_plugin_util.print_option(p_display_value => p_item.lov_null_text',
